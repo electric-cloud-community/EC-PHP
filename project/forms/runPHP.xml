@@ -1,0 +1,38 @@
+<editor>
+    <help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#runPHP</help>
+    <formElement>The location of the ruby executable (e.g. C:\Ruby193\bin\ruby).
+        <type>entry</type>
+        <label>PHP Location:</label>
+        <property>phpLocation</property>
+        <required>0</required>
+        <documentation>The location of the PHP executable (e.g. C:\php-5.4.5-nts-Win32-VC9-x86).</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>PHP File:</label>
+        <property>phpFile</property>
+        <required>0</required>
+        <documentation>Absolute path to a php file.</documentation>
+    </formElement>
+    <formElement>
+        <type>textarea</type>
+        <label>Script:</label>
+        <property>phpCode</property>
+        <documentation>Enter php code.</documentation>
+        <required>0</required>
+    </formElement>
+    <formElement>
+         <type>checkbox</type>
+        <label>Additional arguments</label>
+        <property>checkArgs</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <documentation>Enable the entry of arguments into the execution.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Arguments:</label>
+        <property>phpArguments</property>
+        <documentation>The arguments to be passed into the script.</documentation>
+    </formElement>
+</editor>

@@ -1,0 +1,12 @@
+if [ -z "$SELENIUM_PRELOADED" ] ; then \
+    	curl -s 'http://localhost:4444/selenium-server/driver/?cmd=shutDownSeleniumServer'; COUNT=0; while netstat -an | grep ":4444.*LIST" > /dev/null 2>&1 ; do sleep 1; COUNT=`/usr/bin/expr $COUNT + 1`; if [ $COUNT -eq 10 ] ; then echo "ERROR: Couldn't stop selenium server"; break; fi; done; taskkill /f /fi "IMAGENAME eq iexplore.exe" ; : ; \
+else \
+    echo "pre-selenium-cleanup: Selenium server preloaded."; \
+fi
+INFO: No tasks running with the specified criteria.
+if [ -z "$SELENIUM_PRELOADED" ] ; then \
+    	mkdir -p ../../../out/common/jsalas/EC-PHP/i686_win32; while /bin/true ; do echo "`date`: Starting up Selenium server."; "/usr/local/tools/i686_win32/jdk1.6.0_18//bin/java" -jar ../build/lib/selenium-server.jar -debug -firefoxProfileTemplate ../../../out/common/jsalas/firefoxProfile -userExtensions ../build/lib/user-extensions.js > ../../../out/common/jsalas/EC-PHP/i686_win32/selenium.log 2>&1 & while ! wget http://localhost:4444 2>&1 | grep -q 403 ; do sleep 1; done; echo "`date`: Selenium server is up."; echo "`date`: Testing Selenium server viability."; if "c:/Program Files/Electric Cloud/ElectricCommander/bin/ec-perl" ../build/perl/pingSelenium.pl jsalas:4430; then echo "`date`: Selenium server is working properly!"; break; else echo "`date`: Selenium server is not working properly.  Restarting."; 	curl -s 'http://localhost:4444/selenium-server/driver/?cmd=shutDownSeleniumServer'; COUNT=0; while netstat -an | grep ":4444.*LIST" > /dev/null 2>&1 ; do sleep 1; COUNT=`/usr/bin/expr $COUNT + 1`; if [ $COUNT -eq 10 ] ; then echo "ERROR: Couldn't stop selenium server"; break; fi; done; taskkill /f /fi "IMAGENAME eq iexplore.exe" ; : ; fi; done; \
+else \
+    echo "start-selenium: Selenium server preloaded."; \
+fi
+Tue Jul 27 17:03:52 CAST 2010: Starting up Selenium server.
