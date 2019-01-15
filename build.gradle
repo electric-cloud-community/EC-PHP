@@ -23,9 +23,6 @@ buildscript {
 repositories {
     mavenLocal()
     jcenter()
-    maven {
-        url "http://10.200.1.182:8081/artifactory/repo"
-    }
 
     maven {
         url "https://oss.sonatype.org/content/repositories/snapshots"
@@ -40,7 +37,7 @@ repositories {
 
 group = "com.electriccloud"
 description = "Plugins : EC-PHP"
-version = "2.0.4"
+version = "2.0.5"
 
 apply plugin: 'flow-gradle-plugin'
 apply plugin: 'license'
