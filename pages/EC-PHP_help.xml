@@ -23,7 +23,7 @@
     "margin-left: -10px; margin-top: 10px; height: 1px; width: 100%; color: #5981BD;"
     noshade="noshade" />
 
-	<p>July 1, 2015</p>
+    <p>January 15, 2019</p>
 	
     <p>PHP is a widely-used general-purpose scripting language that
     is especially suited for Web development and can be embedded
@@ -128,7 +128,10 @@
     "../../plugins/@PLUGIN_KEY@/images/PHP-4.png" alt="Result-2" />
 
     <h1>Release Notes</h1>
-	
+    <h2>@PLUGIN_KEY@-2.0.5</h2>
+    <ul>
+        <li>The plugin icon has been updated.</li>
+    </ul>
 	<h2>@PLUGIN_KEY@-2.0.4</h2>
 
     <ul>
