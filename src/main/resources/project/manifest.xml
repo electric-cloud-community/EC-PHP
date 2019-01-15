@@ -1,0 +1,15 @@
+<?xml version='1.0' standalone='yes'?>
+<fileset>
+  <file>
+    <path>phpDriver.pl</path>
+    <xpath>//property[propertyName=&quot;phpDriver&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>forms/runPHP.xml</path>
+    <xpath>//procedure[procedureName=&quot;runPHP&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>ec_setup.pl</path>
+    <xpath>//property[propertyName=&quot;ec_setup&quot;]/value</xpath>
+  </file>
+</fileset>
